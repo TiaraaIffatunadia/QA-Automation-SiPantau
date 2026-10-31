@@ -1,0 +1,21 @@
+# Katalon generated or private folders
+Profiles/
+Reports/
+Libs/
+bin/
+.settings/
+.classpath
+.project
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# Private data (keep real test data out)
+Data Files/
+credentials*
+*.env
+
+# Computer files
+.DS_Store
+Thumbs.db
