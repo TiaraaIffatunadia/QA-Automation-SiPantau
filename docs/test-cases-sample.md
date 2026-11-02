@@ -14,7 +14,7 @@
 | SC-137 | Bidang | Functional | Set Status Laporan Pekerjaan | Tutup form dengan perubahan data tanpa mengirim status laporan pekerjaan | Sistem tidak mengubah data | Fail |
 | SC-143 | Bidang | DT | Realisasi Keuangan | Mengubah progres realisasi keuangan dengan nilai lebih kecil | Sistem menolak menyimpan data tidak valid | Fail |
 | SC-144 | Bidang | EP & BVA | Realisasi Keuangan | Mengubah progres realisasi keuangan dengan nilai valid | Sistem menerima menyimpan data valid | Pass |
-| SC-143 | Bidang | EP & BVA | Realisasi Keuangan | Mengubah progres realisasi keuangan dengan nilai tidak valid | Sistem menolak menyimpan data tidak valid | Fail |
+| SC-145 | Bidang | EP & BVA | Realisasi Keuangan | Mengubah progres realisasi keuangan dengan nilai tidak valid | Sistem menolak menyimpan data tidak valid | Fail |
 | SC-188 | Disdik | EP | Reset Password Sekolah | Reset password dengan data valid | Sistem menampilkan notif berhasil mereset password sekolah | Fail |
 | SC-189 | Disdik | EP | Reset Password Sekolah | Reset password dengan data tidak valid | Sistem menampilkan notif peringatan dan/atau menolak inputan tidak valid | Fail |
 | SC-193 | Disdik | Functional | Logout | User berhasil logout | Logout Berhasil | Pass |
