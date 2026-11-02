@@ -1,0 +1,17 @@
+Feature: Hapus Detail Realisasi Pekerjaan
+  User Sekolah ingin menghapus realisasi pekerjaan
+
+  Scenario: Menyiapkan lingkungan pengujian
+    Given Persiapan Test Pengujian Form Tambah Realisasi Pekerjaan
+
+  #SC-25
+  Scenario: Hapus detail realisasi pekerjaan
+    Given User telah login sebagai Sekolah
+    And User Sekolah berada di halaman Dashboard
+    And User Sekolah klik tombol Detail Realisasi Dashboard
+    When User Sekolah klik tombol Hapus Realisasi
+    And User Sekolah klik tombol Iya, Hapus
+    Then Sistem menghapus realisasi pekerjaan
+    And Data detail realisasi pekerjaan pada tabel Detail Realisasi dihapus
+    And Data detail realisasi pekerjaan pada tabel Realisasi dihapus
+    And Data detail realisasi pekerjaan pada tabel Dashboard dihapus
