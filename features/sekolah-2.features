@@ -1,0 +1,39 @@
+Feature: Pengujian Form Edit Realisasi Pekerjaan
+
+  Scenario: Menyiapkan lingkungan pengujian
+    Given Persiapan Test Pengujian Form Edit Realisasi Pekerjaan
+    
+
+  #SC-19
+  Scenario Outline: Menyimpan nilai progres yang tidak valid
+    Given User telah login sebagai Sekolah
+    And User Sekolah berada di halaman Dashboard
+    And User Sekolah klik tombol Detail Realisasi Dashboard
+    When User Sekolah klik tombol Edit Realisasi
+    And User Sekolah mengisi progres fisik "<nilai>"
+    And User Sekolah klik tombol Simpan pada Form Edit Realisasi Pekerjaan
+    Then Sistem tetap berada di form edit realisasi
+
+    Examples:
+      | nilai |
+      |       |
+      | 0     |
+      | 40    |
+      | -50   |
+
+  #SC-20
+  Scenario Outline: Menyimpan file bukti realisasi yang tidak valid
+    Given User telah login sebagai Sekolah
+    And User Sekolah berada di halaman Dashboard
+    And User Sekolah klik tombol Detail Realisasi Dashboard
+    When User Sekolah klik tombol Edit Realisasi
+    And User Sekolah mengisi progres fisik "<nilai>"
+    And User Sekolah menghapus file bukti realisasi
+    And User Sekolah mengunggah file bukti realisasi tidak valid
+    And User Sekolah klik tombol Simpan pada Form Edit Realisasi Pekerjaan
+    Then Sistem tetap berada di form edit realisasi
+ 
+    Examples:
+      | nilai |
+      | 50    |
+      
