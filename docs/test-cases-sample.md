@@ -7,9 +7,9 @@
 | SC-025 | Sekolah | Functional | Hapus Detail Realisasi Pekerjaan | Hapus detail realisasi pekerjaan | Sistem menampilkan notif berhasil menghapus data dan data pada tabel diperbarui | Fail |
 | SC-043 | KCD | DT | Tambah Pekerjaan | Menambah pekerjaan dengan jenis pekerjaan tidak valid | Sistem hanya dapat memilih jenis pekerjaan yang merupakan wilayah wewenangnya | Fail |
 | SC-046 | KCD | BVA | Tambah Pekerjaan | Menambah pekerjaan dengan batas atas dari total dan volume | Sistem menerima menyimpan data valid | Pass |
-| SC-046 | KCD | EP| Tambah Pekerjaan | Menambah pekerjaan dengan inputan valid | Sistem menerima menyimpan data valid | Pass |
+| SC-047 | KCD | EP| Tambah Pekerjaan | Menambah pekerjaan dengan inputan valid | Sistem menerima menyimpan data valid | Pass |
 | SC-051 | KCD | EP & DT | Tambah Pekerjaan via Dashboard | Menambah pekerjaan dengan data tidak valid | Sistem hanya dapat memilih jenis pekerjaan yang merupakan wilayah wewenangnya & Sistem menolak data tidak valid | Fail |
-| SC-064 | KCD | Functional | Form Edit Pekerjaan | Batal mengubah pekerjaan | Sistem tidak mengubah data | Fail |
+| SC-064 | KCD | Functional | Form Edit Pekerjaan | Batal mengubah pekerjaan | Sistem tidak mengubah data | Pass |
 | SC-136 | Bidang | Functional | Set Status Laporan Pekerjaan | Berhasil mengubah status laporan pekerjaan | Sistem menyimpan data baru | Pass |
 | SC-137 | Bidang | Functional | Set Status Laporan Pekerjaan | Tutup form dengan perubahan data tanpa mengirim status laporan pekerjaan | Sistem tidak mengubah data | Fail |
 | SC-143 | Bidang | DT | Realisasi Keuangan | Mengubah progres realisasi keuangan dengan nilai lebih kecil | Sistem menolak menyimpan data tidak valid | Fail |
