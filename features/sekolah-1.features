@@ -1,0 +1,39 @@
+Feature: Pengujian Form Tambah Realisasi Pekerjaan
+
+  Scenario: Menyiapkan lingkungan pengujian
+    Given Persiapan Test Pengujian Form Tambah Realisasi Pekerjaan
+
+  #SC-14
+  Scenario Outline: Menyimpan nilai progres yang tidak valid
+    Given User telah login sebagai Sekolah
+    And User Sekolah berada di halaman Realisasi
+    And User Sekolah klik tombol Tambah Realisasi
+    When User Sekolah mengisi progres fisik "<nilai>"
+    And User Sekolah mengunggah file bukti realisasi
+    And User Sekolah klik tombol Simpan pada Form Tambah Realisasi Pekerjaan
+    Then Sistem tetap berada di form tambah realisasi
+
+    Examples:
+      | nilai |
+      |       |
+      | -1    |
+      | 0     |
+      | 99    |
+      | 101   |
+
+  #SC-016
+  Scenario Outline: Menyimpan nilai progres yang valid
+    Given User telah login sebagai Sekolah
+    And User Sekolah berada di halaman Realisasi
+    And User Sekolah klik tombol Tambah Realisasi
+    When User Sekolah mengisi progres fisik "<nilai>"
+    And User Sekolah mengunggah file bukti realisasi
+    And User Sekolah klik tombol Simpan pada Form Tambah Realisasi Pekerjaan
+    Then Sistem berhasil menyimpan data baru
+    And Data realisasi pekerjaan pada tabel Realisasi diperbarui
+
+    Examples:
+      | nilai |
+      | 1     |
+      | 50    |
+      | 100   |
