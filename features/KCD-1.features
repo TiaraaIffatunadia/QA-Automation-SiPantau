@@ -1,0 +1,51 @@
+Feature: Form Tambah Pekerjaan KCD
+User KCD ingin dapat menambah pekerjaan KCD (selain USB dan Lahan)
+
+  #SC-43
+  Scenario Outline: Menambah pekerjaan dengan jenis pekerjaan tidak valid
+    Given User telah login sebagai KCD
+    And User KCD berada di halaman Dashboard
+    And User KCD klik tombol Detail Dashboard
+    When User KCD klik tombol Tambah Pekerjaan
+    And User KCD mengisi jenis pekerjaan "<jenis pekerjaan>"
+    And User KCD mengisi volume pekerjaan
+    And User KCD mengisi total anggaran pekerjaan
+    And User KCD klik tombol Simpan Pekerjaan
+    Then Sistem KCD menampilkan notif peringatan
+
+    Examples:
+      | jenis pekerjaan |
+      | USB SMA         |
+      |                 |
+
+  #SC-46
+  Scenario Outline: Menambah pekerjaan dengan batas atas dari total dan volume
+    Given User telah login sebagai KCD
+    And User KCD berada di halaman Dashboard
+    And User KCD klik tombol Detail Dashboard
+    When User KCD klik tombol Tambah Pekerjaan
+    And User KCD mengisi jenis pekerjaan
+    And User KCD mengisi volume pekerjaan "<volume>"
+    And User KCD mengisi total anggaran pekerjaan "<total>"
+    And User KCD klik tombol Simpan Pekerjaan
+    Then Sistem berhasil menambah data pekerjaan KCD
+    And Data daftar pekerjaan pada Tabel diperbarui
+
+    Examples:
+      | volume | total |
+      | 1      | 1     |
+      | 2      | 2     |
+
+  #SC-47
+  Scenario: Menambah pekerjaan dengan inputan valid
+    Given User telah login sebagai KCD
+    And User KCD berada di halaman Dashboard
+    And User KCD klik tombol Detail Dashboard
+    When User KCD klik tombol Tambah Pekerjaan
+    And User KCD mengisi jenis pekerjaan
+    And User KCD mengisi volume pekerjaan
+    And User KCD mengisi total anggaran pekerjaan
+    And User KCD klik tombol Simpan Pekerjaan
+    Then Sistem berhasil menambah data pekerjaan KCD
+    And Data daftar pekerjaan pada Tabel diperbarui
+    
