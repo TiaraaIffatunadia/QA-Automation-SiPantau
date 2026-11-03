@@ -13,6 +13,7 @@ web-based monitoring system using BDD (Behavior-Driven Development).
 - Equivalence Partitioning (EP)
 - Boundary Value Analysis (BVA)
 - Decision Table (DT)
+- Basic security checks: access control and session management
 
 ## Tools
 Katalon Studio (Selenium-based), Cucumber/Gherkin, Groovy, GitHub
