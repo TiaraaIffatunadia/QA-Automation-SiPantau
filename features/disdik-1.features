@@ -1,0 +1,29 @@
+Feature: Reset Password Sekolah
+
+  #SC-188
+  Scenario Outline: reset pass sekolah
+    Given User telah login sebagai KCD
+    And User klik menu Reset Password Sekolah
+    When User mengisi kolom NPSN sekolah "<npsn>"
+    And User klik tombol reset
+    Then Sistem menampilkan notif berhasil mereset password sekolah
+
+    Examples:
+      | npsn     |
+      | 00000000 |
+
+  #SC-189
+  Scenario Outline: reset pass sekolah
+    Given User telah login sebagai KCD
+    And User klik menu Reset Password Sekolah
+    When User mengisi kolom NPSN sekolah "<npsn>"
+    And User klik tombol reset
+    Then Sistem menampilkan notif peringatan
+
+    Examples:
+      | npsn      |
+      | 1234567   |
+      | 123456789 |
+      | 09876543  |
+      |           |
+      | qwertyui  |
