@@ -1,0 +1,35 @@
+Feature: Memverifikasi dan memvalidasi laporan pekerjaan user sekolah
+  User Bidang ingin melakukan verifikasi dan validasi laporan pekerjaan dari user sekolah
+
+  #SC-143
+  Scenario Outline: Berhasil mengubah status laporan pekerjaan
+    Given User telah login sebagai Bidang
+    And User berada di halaman Pemantauan Laporan
+    When User Bidang klik tombol Verifikasi
+    And User klik tombol Set Status
+    And User klik tombol aksi Edit
+    And User ubah status "<status>"
+    And User klik tombol aksi Kirim
+    And User klik tombol Kirim untuk konfirmasi
+    Then Sistem berhasil mengubah status
+
+    Examples:
+      | status    |
+      | Pending   |
+      | Diketahui |
+
+  ##SC-144
+  Scenario Outline: Tutup form dengan perubahan data tanpa mengirim status laporan pekerjaan
+    Given User telah login sebagai Bidang
+    And User berada di halaman Pemantauan Laporan
+    When User Bidang klik tombol Verifikasi
+    And User klik tombol Set Status
+    And User klik tombol aksi Edit
+    And User ubah status "<status>"
+    And User klik tombol Tutup halaman detail realisasi
+    Then Status pekerjaan tidak berubah
+
+    Examples:
+      | status    |
+      | Pending   |
+      | Diketahui |
