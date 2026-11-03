@@ -1,0 +1,11 @@
+Feature: Form Edit Pekerjaan KCD
+User KCD ingin dapat mengubah data pekerjaan KCD (selain USB dan Lahan)
+
+    #SC-64
+    Scenario: Batal mengubah pekerjaan
+    Given User telah login sebagai KCD
+    And User KCD berada di halaman Dashboard
+    And User KCD klik tombol Detail Dashboard
+    When User KCD klik tombol Edit Pekerjaan
+    And User KCD klik tombol Batal Pekerjaan
+    Then Sistem KCD menutup Form Edit Pekerjaan
