@@ -1,10 +1,11 @@
 Feature: Menguji kolom masukkan laporan realisasi keuangan dengan aturan bisnis
-  Nilai realisasi keuangan harus mengikuti aturan bisnis.
+  Nilai realisasi keuangan harus mengikuti aturan bisnis
   Nilai saat ini adalah "Rp100.000" dan tidak boleh diubah
   ke nilai yang tidak valid
 
 
-  Scenario Outline: Mengubah progres realisasi keuangan dengan nilai tidak valid
+#SC-143  
+Scenario Outline: Mengubah progres realisasi keuangan dengan nilai tidak valid
     Given User telah login sebagai KCD
     And User berada di halaman Pemantauan Laporan
     When User KCD klik tombol Verifikasi
