@@ -1,0 +1,32 @@
+Feature: Form Tambah Pekerjaan Dashboard KCD
+User KCD ingin dapat menambah pekerjaan KCD melalui halaman Dashboard (selain USB dan Lahan)
+
+  #SC-51
+  Scenario Outline: Menambah pekerjaan dengan data tidak valid
+    Given User telah login sebagai KCD
+    And User KCD berada di halaman Dashboard
+    When User KCD klik tombol Tambah Pekerjaan Dashboard
+    And User KCD mengisi NPSN "<npsn>"
+    And User KCD mengisi nama sekolah "<nama sekolah>"
+    And User KCD mengisi jenjang sekolah "<jenjang>"
+    And User KCD mengisi kab kota sekolah "<kab kota>"
+    And User KCD mengisi kecamatan sekolah "<kecamatan>"
+    And User KCD mengisi jenis pekerjaan "<jenis pekerjaan>"
+    And User KCD mengisi volume pekerjaan dashboard
+    And User KCD mengisi total anggaran pekerjaan dashboard
+    And User KCD klik tombol Simpan Pekerjaan dashboard
+    Then Sistem tetap menampilkan form tambah pekerjaan dashboard
+
+    Examples:
+      | npsn      | nama sekolah       | jenjang | kab kota | kecamatan | jenis pekerjaan |
+      | 1234567   | Test Sekolah Dummy | terisi  | terisi   | terisi    | terisi          |
+      | 123456789 | Test Sekolah Dummy | terisi  | terisi   | terisi    | terisi          |
+      |           | Test Sekolah Dummy | terisi  | terisi   | terisi    | terisi          |
+      | npsnhuruf | Test Sekolah Dummy | terisi  | terisi   | terisi    | terisi          |
+      | @#$%^     | Test Sekolah Dummy | terisi  | terisi   | terisi    | terisi          |
+      | 00000000  |                    | terisi  | terisi   | terisi    | terisi          |
+      | 00000000  | Test Sekolah Dummy |         | terisi   | terisi    | terisi          |
+      | 00000000  | Test Sekolah Dummy | terisi  |          | terisi    | terisi          |
+      | 00000000  | Test Sekolah Dummy | terisi  | terisi   |           | terisi          |
+      | 00000000  | Test Sekolah Dummy | terisi  | terisi   | terisi    |                 |
+      | 00000000  | Test Sekolah Dummy | terisi  | terisi   | terisi    | USB SMA         |
