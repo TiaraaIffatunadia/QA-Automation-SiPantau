@@ -1,0 +1,7 @@
+Feature: Export data tabel menjadi file excel
+
+#SC-197
+Scenario: export file
+Given User telah login sebagai Disdik
+When User klik tombol export file
+Then Sistem mengunduh file excel
