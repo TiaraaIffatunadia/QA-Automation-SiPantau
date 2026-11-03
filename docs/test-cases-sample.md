@@ -18,5 +18,5 @@
 | SC-188 | Disdik | EP | Reset Password Sekolah | Reset password dengan data valid | Sistem menampilkan notif berhasil mereset password sekolah | Fail |
 | SC-189 | Disdik | EP | Reset Password Sekolah | Reset password dengan data tidak valid | Sistem menampilkan notif peringatan dan/atau menolak inputan tidak valid | Fail |
 | SC-193 | Disdik | Functional | Logout | User berhasil logout | Logout Berhasil | Pass |
-| SC-195 | Disdik | Functional | Logout | User menekan tombol Back pada browser setelah logout | User tidak bisa mengakses sistem karena sesi sudah berakhir | Pass |
+| SC-195 | Disdik | Security | Logout | User menekan tombol Back pada browser setelah logout | User tidak bisa mengakses sistem karena sesi sudah berakhir | Pass |
 | SC-197 | Disdik | Functional | Export File | Ekspor data tabel menjadi file excel | Sistem mengunduh file excel | Pass |
