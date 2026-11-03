@@ -2,7 +2,7 @@ Feature: Reset Password Sekolah
 
   #SC-188
   Scenario Outline: reset pass sekolah
-    Given User telah login sebagai KCD
+    Given User telah login sebagai Disdik
     And User klik menu Reset Password Sekolah
     When User mengisi kolom NPSN sekolah "<npsn>"
     And User klik tombol reset
@@ -14,7 +14,7 @@ Feature: Reset Password Sekolah
 
   #SC-189
   Scenario Outline: reset pass sekolah
-    Given User telah login sebagai KCD
+    Given User telah login sebagai Disdik
     And User klik menu Reset Password Sekolah
     When User mengisi kolom NPSN sekolah "<npsn>"
     And User klik tombol reset
