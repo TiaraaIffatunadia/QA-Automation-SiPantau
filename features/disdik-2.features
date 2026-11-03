@@ -1,0 +1,18 @@
+Feature: Mengakhiri sesi login user
+
+  #SC-193
+  Scenario: User berhasil logout
+    Given User telah login sebagai Disdik
+    And User Disdik berada di halaman Dashboard
+    When User Disdik klik tombol logout
+    Then Sistem menampilkan halaman Login
+ 
+  #SC-195
+  Scenario: User menekan tombol Back pada browser setelah logout
+    Given User telah login sebagai Disdik
+    And User Disdik berada di halaman Dashboard
+    And User Disdik klik tombol logout
+    And Sistem menampilkan halaman Login
+    When User menekan tombol Back pada browser
+    Then Sistem menampilkan halaman Login
+    
