@@ -1,0 +1,36 @@
+Feature: Validasi kolom realisasi keuangan
+  Nilai realisasi keuangan tidak boleh kurang dari 0
+  Kolom ini wajib diisi
+
+
+  Scenario Outline: Mengubah progres realisasi keuangan dengan nilai valid
+    Given User telah login sebagai KCD
+    And User berada di halaman Pemantauan Laporan
+    When User KCD klik tombol Verifikasi
+    And User klik tombol Set Status
+    And User klik tombol aksi Edit
+    And User ubah realisasi keuangan "<keuangan>"
+    And User klik tombol aksi Kirim
+    And User klik tombol Kirim untuk konfirmasi
+    Then Sistem berhasil mengubah progres realisasi keuangan
+
+    Examples:
+      | keuangan |
+      | 0        |
+      | 1        |
+
+  Scenario Outline: Mengubah progres realisasi keuangan dengan nilai tidak valid
+    Given User telah login sebagai KCD
+    And User berada di halaman Pemantauan Laporan
+    When User KCD klik tombol Verifikasi
+    And User klik tombol Set Status
+    And User klik tombol aksi Edit
+    And User ubah realisasi keuangan "<keuangan>"
+    And User klik tombol aksi Kirim
+    And User klik tombol Kirim untuk konfirmasi
+    Then Sistem tidak mengubah progres realisasi keuangan
+
+    Examples:
+      | keuangan |
+      | -1       |
+      |          |
