@@ -1,7 +1,7 @@
 Feature: Memverifikasi dan memvalidasi laporan pekerjaan user sekolah
   User Bidang ingin melakukan verifikasi dan validasi laporan pekerjaan dari user sekolah
 
-  #SC-143
+  #SC-136
   Scenario Outline: Berhasil mengubah status laporan pekerjaan
     Given User telah login sebagai Bidang
     And User berada di halaman Pemantauan Laporan
@@ -18,7 +18,7 @@ Feature: Memverifikasi dan memvalidasi laporan pekerjaan user sekolah
       | Pending   |
       | Diketahui |
 
-  ##SC-144
+  ##SC-137
   Scenario Outline: Tutup form dengan perubahan data tanpa mengirim status laporan pekerjaan
     Given User telah login sebagai Bidang
     And User berada di halaman Pemantauan Laporan
