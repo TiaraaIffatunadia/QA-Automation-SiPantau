@@ -1,10 +1,10 @@
 # Test Plan
 
 ## Scope
-Functional testing of a web-based monitoring system, for 4 user roles.
+Functional testing of a web-based monitoring system, for 4 user roles
 
 ## Approach
-Black-box testing with BDD. Test design techniques: EP, BVA, Decision Table.
+Black-box testing with BDD. Test design techniques: EP, BVA, Decision Table
 
 ## Tools
 Katalon Studio (Selenium-based), Gherkin, Groovy, GitHub
@@ -15,4 +15,4 @@ Browser : Google Chrome
 Katalon Studio 11.3.0
 
 ## Out of Scope
-Regression, performance, security, and API testing.
+Regression, performance, advance security (e.g., penetration testing), and API testing
