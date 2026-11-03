@@ -3,7 +3,8 @@ Feature: Validasi kolom realisasi keuangan
   Kolom ini wajib diisi
 
 
-  Scenario Outline: Mengubah progres realisasi keuangan dengan nilai valid
+#SC-144  
+Scenario Outline: Mengubah progres realisasi keuangan dengan nilai valid
     Given User telah login sebagai KCD
     And User berada di halaman Pemantauan Laporan
     When User KCD klik tombol Verifikasi
@@ -19,7 +20,8 @@ Feature: Validasi kolom realisasi keuangan
       | 0        |
       | 1        |
 
-  Scenario Outline: Mengubah progres realisasi keuangan dengan nilai tidak valid
+#SC-145  
+Scenario Outline: Mengubah progres realisasi keuangan dengan nilai tidak valid
     Given User telah login sebagai KCD
     And User berada di halaman Pemantauan Laporan
     When User KCD klik tombol Verifikasi
